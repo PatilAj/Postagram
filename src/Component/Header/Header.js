@@ -147,6 +147,7 @@ const Header = () => {
                   size={40}
                 />
                 <RiAddCircleLine
+                onClick={handleClick}
                   className="px-3 py-2 text-sm rounded-md text-black hover:text-white/100 hover:bg-black/60 transition  cursor-pointer"
                   size={40}
                 />
