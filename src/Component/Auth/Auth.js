@@ -14,7 +14,7 @@ import IsOnboard from './IsOnboard';
 const Auth = () => {
   const [isLoginForm, setIsLoginForm] = useState(false);
 
-  const { isAuthenticated, isLoading, isOnboarded} = useContext(GlobalContext);
+  const { isAuthenticated, isLoading, isOnboarded } = useContext(GlobalContext);
 
   const dispatch = useContext(GlobalDispatchContext);
 
@@ -75,8 +75,8 @@ const Auth = () => {
 
   return (
     <div className="w-screen h-screen flex items-center justify-center bg-[#FAFAFA]">
-      <div className="flex w-4/5 h-4/5">
-        <div className="w-full h-full">
+      <div className="flex flex-col md:flex-row w-11/12 md:w-4/5 xl:w-3/5 h-4/5">
+        <div className="hidden md:block w-full h-full md:w-1/2">
           <Lottie
             play
             loop
@@ -84,7 +84,7 @@ const Auth = () => {
             className="w-full h-full"
           />
         </div>
-        <div className="flex flex-col w-full space-y-5 ">
+        <div className="flex flex-col w-full md:w-1/2 space-y-5 ">
           <div className="relative flex flex-col w-full p-10 space-y-5 bg-white border border-gray-300">
             {isLoading && <Loading />}
             {!isAuthenticated && (
@@ -92,8 +92,8 @@ const Auth = () => {
                 onSubmit={submitHandler}
                 className="flex flex-col items-center space-y-5"
               >
-              <div className='my-3'>
-                <h1 className="text-3xl text-center font-bold tracking-wider bg-gradient-to-r from-blue-700 via-red-600  to-fuchsia-600 text-transparent bg-clip-text">Postagram</h1>
+                <div className='my-3'>
+                  <h1 className="text-3xl text-center font-bold tracking-wider bg-gradient-to-r from-blue-700 via-red-600  to-fuchsia-600 text-transparent bg-clip-text">Postagram</h1>
                 </div>
                 <input 
                   type="email"
@@ -122,7 +122,7 @@ const Auth = () => {
                 </button>
               </form>
             )}
-              {isAuthenticated && !isOnboarded && <IsOnboard/>}
+            {isAuthenticated && !isOnboarded && <IsOnboard/>}
             <div className="flex items-center justify-center w-full my-5 space-x-2">
               <div className="h-[0.8px] w-full bg-slate-400" />
               <div className="text-sm font-semibold text-center text-gray-400">

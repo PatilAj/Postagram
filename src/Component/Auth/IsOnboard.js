@@ -104,7 +104,7 @@ const IsOnboard = () => {
   return (
     <form
       onSubmit={onboardingSubmitHandler}
-      className="flex flex-col items-center space-y-5"
+      className="flex flex-col items-center justify-center space-y-5 max-w-sm "
     >
       <div className="my-3">
         <h1 className="text-3xl text-center font-bold tracking-wider bg-gradient-to-r from-blue-700 via-red-600  to-fuchsia-600 text-transparent bg-clip-text">
@@ -117,7 +117,7 @@ const IsOnboard = () => {
         id="username"
         onChange={onboardingFormOnChangeHandler}
         value={onboardingForm.username}
-        className="w-full px-2 py-1 bg-gray-100 border rounded-sm outline-none hover:bg-transparent focus:bg-transparent placeholder:text-sm focus:border-gray-400"
+        className="w-full py-1 bg-gray-100 border rounded-sm outline-none hover:bg-transparent focus:bg-transparent placeholder:text-sm focus:border-gray-400"
         placeholder="Enter Username"
       />
       <input
@@ -127,12 +127,13 @@ const IsOnboard = () => {
         onChange={onboardingFormOnChangeHandler}
         value={onboardingForm.fullname}
         placeholder="Enter Full Name"
-        className="w-full px-2 py-1 bg-gray-100 border rounded-sm outline-none hover:bg-transparent focus:bg-transparent placeholder:text-sm focus:border-gray-400"
+        className="w-full py-1 bg-gray-100 border rounded-sm outline-none hover:bg-transparent focus:bg-transparent placeholder:text-sm focus:border-gray-400"
       />
       <input
         type="file"
         name="profileImage"
         id="profileImage"
+        className="w-[80%]"
         onChange={profileImageOnChangeHandler}
       />
       <button
