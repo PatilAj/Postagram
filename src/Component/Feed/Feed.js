@@ -9,8 +9,9 @@ import {
 } from "../../State/Context/GlobalContext";
 import { db } from "../../Firebase/Config";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
-import Sidebar from "../Sidebar/Sidebar";
 import ProfileView from "../Profile/ProfileView";
+import Sidebar from "../Sidebar/Sidebar";
+import "./Feed.css"; // Import a CSS file to define the media query
 
 const Feed = () => {
   const { isPostModalOpen } = useContext(GlobalContext);
@@ -45,8 +46,8 @@ const Feed = () => {
         <ModalFunctions closeModal={closeModal} />
       </Modal>
 
-      <div className="w-full gap-6 mt-10 py-9 flex justify-between">
-        <section className="w-1/4 px-10 ">
+      <div className="w-full gap-6 mt-10 py-10 flex justify-between">
+        <section className="w-1/4">
           <ProfileView />
         </section>
         <section className="w-2/4 items-center">
@@ -57,10 +58,10 @@ const Feed = () => {
           </section>
         </section>
         <section className="w-1/4">
-        <Sidebar />
+          <Sidebar />
         </section>
       </div>
-      </div>
+    </div>
   );
 };
 

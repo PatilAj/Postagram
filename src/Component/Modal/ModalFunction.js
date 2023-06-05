@@ -106,11 +106,11 @@ const ModalFunctions = ({ closeModal }) => {
   };
 
   return (
-    <div className="w-screen h-screen max-w-xl max-h-[60vh] flex flex-col items-center ">
+    <div className="w-100 h-100 max-w-xl max-h-[60vh] flex flex-col items-center ">
       <div className="w-full py-1 text-xl text-center font-semibold border-b border-black">
         Create New Post
       </div>
-      <div className="flex items-center justify-center w-full h-full">
+      <div className="pt-3 flex items-center justify-center w-full h-full">
         {!file ? (
           <>
             <label
@@ -138,7 +138,7 @@ const ModalFunctions = ({ closeModal }) => {
               type="image"
               src={media.src}
               alt="Loading.."
-              className="w-auto h-60"
+              className="w-80 h-60"
               ref={currentImage}
             />
 

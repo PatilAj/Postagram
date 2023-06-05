@@ -5,8 +5,6 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { RiMessengerLine } from "react-icons/ri";
 import { RiAddCircleLine } from "react-icons/ri";
 import { BiCompass } from "react-icons/bi";
-// import Lottie from "react-lottie-player";
-// import InstaLogo from "../../Assests/InstaLogo.json";
 import { auth } from "../../Firebase/Config";
 import { signOut } from "firebase/auth";
 import { GlobalDispatchContext } from "../../State/Context/GlobalContext";
@@ -41,7 +39,7 @@ const Header = () => {
         <div className="flex-shrink-0">
               <h1 className=" font-bold text-2xl  bg-gradient-to-r from-blue-700 via-red-600 to-fuchsia-600 text-transparent bg-clip-text">Postagram</h1>
             </div>
-          <div className="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-end">
+          <div className="flex-1 flex justify-center px-5 lg:ml-6 lg:justify-end">
             <div className="max-w-lg w-[80%] lg:max-w-xs">
               <label htmlFor="search" className="sr-only">
                 Search
@@ -93,7 +91,7 @@ const Header = () => {
             <button
               onClick={handleToggle}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -138,28 +136,27 @@ const Header = () => {
       {isOpen && (
         <div className="sm:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1">
-          <AiOutlineHome
-                  className="px-3 py-2 text-sm rounded-md text-black hover:text-white/100 hover:bg-black/60 transition cursor-pointer"
-                  size={40}
-                />
-               <RiMessengerLine
-                  className="px-3 py-2 text-sm rounded-md text-black hover:text-white/100 hover:bg-black/60 transition  cursor-pointer"
-                  size={40}
-                />
-                <RiAddCircleLine
-                onClick={handleClick}
-                  className="px-3 py-2 text-sm rounded-md text-black hover:text-white/100 hover:bg-black/60 transition  cursor-pointer"
-                  size={40}
-                />
-               <AiOutlineHeart
-                  className="px-3 py-2 text-sm rounded-md text-black hover:text-white/100 hover:bg-black/60 transition  cursor-pointer"
-                  size={40}
-                />
-                 <BiCompass
-                  className="px-3 py-2 text-sm rounded-md text-black hover:text-white/100 hover:bg-black/60 transition  cursor-pointer"
-                  size={40}
-                />
-                <button  onClick={handleLogout} className="px-6 text-white rounded text-sm font-semibold active:scale-95 transform transition bg-red-500 hover:bg-red-600 disabled:bg-opacity-50 disabled:scale-100">Logout</button>
+          <div className="flex items-center gap-x-1 p-1 px-3 font-bold text-md rounded-md text-black hover:text-white/100 hover:bg-black/60 transition cursor-pointer">
+              <AiOutlineHome size={25} />
+              <span>Home</span>
+            </div>
+            <div className="flex items-center gap-x-1 p-1 px-3 font-bold text-md rounded-md text-black hover:text-white/100 hover:bg-black/60 transition cursor-pointer">
+              <RiMessengerLine size={25} />
+              <span>Chat</span>
+            </div>
+            <div  onClick={handleClick} className="flex items-center gap-x-1 p-1 px-3 font-bold text-md rounded-md text-black hover:text-white/100 hover:bg-black/60 transition cursor-pointer">
+              <RiAddCircleLine size={25} />
+              <span>Post</span>
+            </div>
+            <div className="flex items-center gap-x-1 p-1 px-3 font-bold text-md rounded-md text-black hover:text-white/100 hover:bg-black/60 transition cursor-pointer">
+              <AiOutlineHeart size={25} />
+              <span>Likes</span>
+            </div>
+            <div className="flex items-center gap-x-1 p-1 px-3 font-bold text-md rounded-md text-black hover:text-white/100 hover:bg-black/60 transition cursor-pointer">
+              <BiCompass size={25} />
+              <span>Feed</span>
+            </div>
+          <button  onClick={handleLogout} className="ml-3 px-10 h-8 text-white rounded text-sm font-semibold active:scale-95 transform transition bg-red-500 hover:bg-red-600 disabled:bg-opacity-50 disabled:scale-100">Logout</button>
           </div>
         </div>
       )}
