@@ -27,17 +27,15 @@ import { GlobalContext } from "../../State/Context/GlobalContext";
 const Post = ({
   id,
   image,
-  userId,
   username,
   caption,
   createdAt,
   likesCount,
-  profileImage,
 }) => {
   const [like, setLike] = useState(false);
   const [comments, setComments] = useState([]);
   const [userProfileImage, setUserProfileImage] = useState("");
-
+  
   let formattedDate = "";
   if (createdAt) {
     const dateObj = createdAt.toDate();

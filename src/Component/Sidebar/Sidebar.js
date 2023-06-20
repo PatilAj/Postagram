@@ -24,7 +24,7 @@ const Sidebar = ({ username }) => {
           <div className="py-4 space-y-3">
             {suggestedUsers.map((user) => (
               <div
-                className="flex items-center justify-around cursor-pointer"
+                className="flex items-center justify-between cursor-pointer"
                 key={user.username}
               >
                 <div className="text-white">{user.fullname}</div>

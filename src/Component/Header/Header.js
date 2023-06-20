@@ -144,7 +144,7 @@ const Header = () => {
               <RiMessengerLine size={25} />
               <span>Chat</span>
             </div>
-            <div  onClick={handleClick} className="flex items-center gap-x-1 p-1 px-3 font-bold text-md rounded-md text-black hover:text-white/100 hover:bg-black/60 transition cursor-pointer">
+            <div onClick={handleClick} className="flex items-center gap-x-1 p-1 px-3 font-bold text-md rounded-md text-black hover:text-white/100 hover:bg-black/60 transition cursor-pointer">
               <RiAddCircleLine size={25} />
               <span>Post</span>
             </div>
